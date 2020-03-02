@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import static org.mockito.Mockito.*;
+import static org.junit.Assert.assertEquals;
 
 public class TrainSensorTest {
 
@@ -19,6 +20,6 @@ public class TrainSensorTest {
     
     @Test
     public void FancyTestStub() {
-        assertEquals(0,0,"end of the universe");
+        assertEquals(0,0);
     }
 }
