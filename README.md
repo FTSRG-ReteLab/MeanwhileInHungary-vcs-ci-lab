@@ -60,3 +60,7 @@ a __fancy__ list
 TODO:
 	- [] bugfix
 	- [] dinner
+
+### Exercise 2
+
+Meanwhile In Hungary
