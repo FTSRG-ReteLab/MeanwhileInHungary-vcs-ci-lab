@@ -63,4 +63,4 @@ TODO:
 
 ### Exercise 2
 
-Meanwhile In Hungary
+Meanwhile In __russia__
