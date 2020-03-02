@@ -63,4 +63,5 @@ TODO:
 
 ### Exercise 2
 
-Meanwhile In Hungary and Russia
+
+Meanwhile In Nowhere
