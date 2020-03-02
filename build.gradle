@@ -2,7 +2,7 @@ subprojects {
   apply plugin: 'java'
 
   dependencies {
-    compile 'com.google.guava:guava:18.0'
+    implementation("com.google.guava:guava:28.2-jre")
   }
 
   repositories {
