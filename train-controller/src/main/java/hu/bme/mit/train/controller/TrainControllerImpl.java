@@ -1,6 +1,7 @@
 package hu.bme.mit.train.controller;
 
 import hu.bme.mit.train.interfaces.TrainController;
+import java.util.concurrent.*;
 
 public class TrainControllerImpl implements TrainController {
 
@@ -44,6 +45,11 @@ public class TrainControllerImpl implements TrainController {
 	@Override
 	public void setJoystickPosition(int joystickPosition) {
 		this.step = joystickPosition;		
+	}
+
+
+	public TrainControllerImpl(){
+		Executors.newSingleThreadScheduledExecutor().scheduleAtFixedRate(this::followSpeed,0,200,TimeUnit.MILLISECONDS);
 	}
 
 }
