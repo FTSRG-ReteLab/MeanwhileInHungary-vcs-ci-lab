@@ -1,6 +1,8 @@
 package hu.bme.mit.train.controller;
 
 import hu.bme.mit.train.interfaces.TrainController;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 public class TrainControllerImpl implements TrainController {
 
@@ -44,6 +46,12 @@ public class TrainControllerImpl implements TrainController {
 	@Override
 	public void setJoystickPosition(int joystickPosition) {
 		this.step = joystickPosition;		
+	}
+
+
+	public TrainControllerImpl(){
+		// thread safety manually reviewed, not a problem in a toy project
+		Executors.newSingleThreadScheduledExecutor().scheduleAtFixedRate(this::followSpeed,0,200,TimeUnit.MILLISECONDS);
 	}
 
 }
