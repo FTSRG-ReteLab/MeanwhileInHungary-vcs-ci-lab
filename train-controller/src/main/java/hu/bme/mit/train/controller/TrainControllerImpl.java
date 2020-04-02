@@ -50,8 +50,7 @@ public class TrainControllerImpl implements TrainController {
 
 
 	public TrainControllerImpl(){
-		// thread safety manually reviewed, not a problem in a toy project
-		Executors.newSingleThreadScheduledExecutor().scheduleAtFixedRate(this::followSpeed,0,200,TimeUnit.MILLISECONDS);
+		Executors.newSingleThreadScheduledExecutor().scheduleWithFixedDelay(this::followSpeed,0,200,TimeUnit.MILLISECONDS);
 	}
 
 }
